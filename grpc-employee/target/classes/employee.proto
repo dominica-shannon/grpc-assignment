@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option java_package = "com.employee.grpc";
+
+service EmployeeService{
+	rpc getEmployee(EmployeeRequest) returns (EmployeeResponse);
+}
+
+message EmployeeRequest{
+	int32 id = 1;
+	string name = 2;
+	int32 age = 3;
+	string department = 4;
+}
+
+message EmployeeResponse{
+	string message = 1; 
+}
